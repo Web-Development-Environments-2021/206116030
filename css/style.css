@@ -17,7 +17,12 @@ h1 {
 p ,ul,li{
   font-family: cursive;
 }
-
+table{
+  border: none;
+  align: center;
+  cellpadding: 10px;
+  width: 100%;
+}
 .qr{
   display: block;
   margin-left: auto;
