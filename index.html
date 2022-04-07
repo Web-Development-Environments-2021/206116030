@@ -115,7 +115,7 @@
 
   <div id="sec5">
     <h1>Qr Code</h1>
-    <img class="qr" src="image/qr.PNG" alt="QRCode">
+    <img class="qr" src="image/qr.png" alt="QRCode">
 
   </div>
 
@@ -139,15 +139,43 @@
 
   <div id="sec7">
     <h1>Contact Me</h1>
-    <form method="post" action="mailto:yuvalf301@gmail.com">
+    <form method="post "action="mailto:yuvalf301@gmail.com">
     <p class="cont">
       <strong>My mail: </strong>
       <input class="name-input" name="name" type="text" size="20">
     </p>
-    <p class="cont">
+    <p class="cont1">
       <strong>Message: </strong>
-      <textarea name="message" rows="5" cols="40"></textarea>
+      <textarea id="message" name="message" rows="5" cols="40"></textarea>
     </p>
+    <select id="emoji" onchange="addEmoji()">
+      <option value="😀">😀 </option>
+      <option value="😁">😁 </option>
+      <option value="😂">😂 </option>
+      <option value="😃">😃 </option>
+      <option value="😈">😈 </option>
+      <option value="😋">😋 </option>
+      <option value="😉">😉 </option>
+      <option value="😍">😍 </option>
+      <option value="😎">😎 </option>
+      <option value="😔">😔	 </option>
+      <option value="😘">😘 </option>
+      <option value="😡">😡 </option>
+      <option value="😨">😨 </option>
+      <option value="😩">😩 </option>
+      <option value="😱">😱 </option>
+      <option value="😭">😭</option>
+      <option value="😴">😴 </option>
+      <option value="🙄">🙄 </option>
+      <option value="🤓">🤓 </option>
+      <option value="🤠">🤠 </option>
+      <option value="🤡	">🤡	 </option>
+      <option value="🤣	">🤣	</option>
+      <option value="🤢	">🤢	 </option>
+      <option value="🧐">🧐 </option>
+      <option value="✌"> ✌</option>
+    </select>
+
     <p class="cont">
       <input type="submit" value="Send">
       <input type="reset" value="Delete all">
@@ -167,7 +195,14 @@
     </a>
   </div>
   </div>
-
+  <script type="text/javascript">
+    function addEmoji(){
+      var emo=document.getElementById("emoji");
+      var choose=emo.value;
+      var text=document.getElementById("message");
+      text.value+=choose;
+    }
+  </script>
   <script type="text/javascript">
   $(function(){
     $("#nav a").click(function(e){
